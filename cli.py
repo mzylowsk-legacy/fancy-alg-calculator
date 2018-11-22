@@ -18,5 +18,4 @@ class Cli:
         if len(self.user_arguments) > 1:
             return self.user_arguments[1]
         else:
-            print("ERROR: You have to specify at least alg id!")
-        return None
+            raise NameError("ERROR: You have to specify at least alg id!")
