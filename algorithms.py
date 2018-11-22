@@ -4,7 +4,7 @@ import numbers
 class AlgorithmManager:
     def __init__(self, requested_alg, alg_arguments):
         self.algorithms_list = [
-            (0, "add", "add_element"),
+            (0, "add", "dsad"),
             (1, "add", "add_element"),
             (2, "add", "add_element"),
             (3, "add", "add_element"),
