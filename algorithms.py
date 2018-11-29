@@ -1,3 +1,7 @@
+class AlgorithmManagerException(Exception):
+    pass
+
+
 class AlgorithmManager:
     def __init__(self, requested_alg, alg_arguments):
         self.algorithms_list = [
@@ -12,6 +16,7 @@ class AlgorithmManager:
         self.args = alg_arguments
 
         self.convert_to_algorithm_id()
+        self.check_arguments_count()
 
     def convert_to_algorithm_id(self):
         ids = list(zip(*self.algorithms_list))[0]
@@ -27,3 +32,12 @@ class AlgorithmManager:
                     self.alg = ids[names.index(self.alg)]
                     return
         raise ValueError("ERROR: Wrong algorithm id!")
+
+    def get_arguments_count_for_alg(self):
+        return list(zip(*self.algorithms_list))[3][self.alg]
+
+    def check_arguments_count(self):
+        req_args = self.get_arguments_count_for_alg()
+        if not req_args == len(self.args):
+            raise AlgorithmManagerException("Requested alg needs %s arguments but %s is given."
+                                            % (req_args, len(self.args)))
