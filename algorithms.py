@@ -4,7 +4,7 @@ class AlgorithmManager:
             (0, "modulo", "modulo of two numbers", 2),
             (1, "sort_desc", "sort desc elements", -1),
             (2, "sort", "sort elements", -1),
-            (3, "sum", "sum all elements", -1),
+            (30, "sum", "sum all elements", -1),
             (4, "pi", "return to pi with {param} digits after dot", 0),
             (5, "showtime", "add_element", 0)
         ]

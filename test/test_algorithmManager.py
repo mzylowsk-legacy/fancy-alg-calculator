@@ -8,6 +8,8 @@ class TestAlgorithmManager(TestCase):
         assert algmng.alg == 0, "wrong alg mapping"
         algmng = AlgorithmManager(4, "")
         assert algmng.alg == 4, "wrong alg mapping"
+        algmng = AlgorithmManager(30, "")
+        assert algmng.alg == 30, "wrong alg mapping"
         algmng = AlgorithmManager("sort", "")
         assert algmng.alg == 2, "wrong alg mapping"
         try:
